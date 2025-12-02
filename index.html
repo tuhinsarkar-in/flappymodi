@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Clone</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <canvas id="game" width="480" height="640"></canvas>
+    <div id="overlay" aria-live="polite">
+        <div class="overlay-card score-card" id="score-card" role="dialog" aria-modal="true">
+            <div class="card-banner">Modi Over</div>
+            <div class="score-lines">
+                <div class="score-line">
+                    <span class="label">Score</span>
+                    <span class="value" id="score-value">0</span>
+                </div>
+                <div class="score-line">
+                    <span class="label">Best</span>
+                    <span class="value" id="best-value">0</span>
+                </div>
+            </div>
+            <p class="hint">Tap or press Space to try again</p>
+        </div>
+        <div class="overlay-card score-card start-card" id="start-card" role="dialog" aria-modal="true">
+            <div class="card-banner">Get Ready</div>
+            <p class="start-line">Tap or press Space to start</p>
+            <p class="start-sub">Stay between the pipes!</p>
+        </div>
+        <div class="overlay-card pause-card" id="pause-card" role="status">
+            <div class="pause-frame">
+                <span class="pause-title">Paused</span>
+                <span class="pause-subtitle">Game is waiting for you</span>
+            </div>
+        </div>
+    </div>  
+    <script src="game.js"></script>
+</body>
+</html>
